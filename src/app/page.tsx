@@ -3,6 +3,7 @@ import Image from "next/image";
 import TareaProvider from "./Providers/TareaProvider";
 import FormularioTarea from "./Componentes/FormularioTarea";
 import TablaTareas from "./Componentes/TablaTareas";
+import EditarTarea from "./Componentes/EditarTarea";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <FormularioTarea>
         </FormularioTarea>
         <TablaTareas></TablaTareas>
+        <EditarTarea></EditarTarea>
       </TareaProvider>
     </main>
     </div>

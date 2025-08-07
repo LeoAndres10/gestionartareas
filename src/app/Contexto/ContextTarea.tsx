@@ -6,7 +6,8 @@ export const ContextTarea= createContext({
     tarea: [] as Tarea[],
     estado:'' as string,
     agregarTarea: (item: Tarea)=>{},
-    editarEstado: (nombre: string)=>{}
+    editarEstado: (nombre: string)=>{},
+    eliminarTarea:(idTarea: number)=>{}
 }); 
 
 

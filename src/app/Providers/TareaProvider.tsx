@@ -14,7 +14,10 @@ export default function TareaProvider(props:Plantilla) {
         setTarea([...tarea,item]);
     }
      
-    
+    function eliminarTarea(id:number){
+        const filtro = tarea.filter(tarea=> tarea.idTarea !==id);
+        setTarea(filtro);
+    }
 
 function editarEstado(estado:string){
     setEstado(estado)
@@ -22,7 +25,7 @@ function editarEstado(estado:string){
 
  
         return (
-    <ContextTarea.Provider value={{tarea,estado,agregarTarea,editarEstado}}>
+    <ContextTarea.Provider value={{tarea,estado,agregarTarea,editarEstado,eliminarTarea}}>
         {props.children}
     </ContextTarea.Provider>
   )

@@ -9,7 +9,7 @@ const [tituloTarea, settituloTarea]= useState<string>('');
 const [descripcion,setDescricion]= useState<string>('');
 const [estado, setEstado]= useState<string>('');
 
-const {agregarTarea, tarea,editarEstado} = useContextTarea();
+const {agregarTarea, tarea} = useContextTarea();
 
 function agregarTareaFormulario(e:React.FormEvent){
     e.preventDefault();
@@ -43,25 +43,6 @@ return(
     <button type="submit">Agregar Tarea</button>
 
     
-      <h2>Editar Estado</h2>
-
-      <label>Estado:</label>
-      <input
-        name="Estado actual"
-        value={estado}
-        onChange={(e)=>setEstado(e.target.value)}
-        placeholder="Escribe aqui"
-      />
-
-      <br />
-
-
-      <button onClick={() => editarEstado(estado)}>Aplicar Cambios</button>
-
-      <hr />
-
-      <h3>Estado actual de la tarea:</h3>
-      <p>Estado: {estado}</p>
       
     
     </form>

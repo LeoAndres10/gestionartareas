@@ -3,7 +3,7 @@ import React from "react";
 import { useContextTarea } from "../Providers/TareaProvider";
 
 export default function TablaTareas(){
-    const {tarea}= useContextTarea();
+    const {tarea,eliminarTarea}= useContextTarea();
 
     return(
         <div>
@@ -17,6 +17,7 @@ export default function TablaTareas(){
                 <th>Titulo de Tarea</th>
                 <th>Descripcion de Tarea</th>
                 <th>Estado de Tarea</th>
+                <th>Eliminar Tarea</th>
             </thead>
 
             <tbody>
@@ -27,6 +28,7 @@ export default function TablaTareas(){
                             <td>{tarea.tituloTarea}</td>
                             <td>{tarea.descripcion}</td>
                             <td>{tarea.estado}</td>
+                            <td><button onClick={()=>eliminarTarea(tarea.idTarea)}>Eliminar Tarea</button></td>
                         </tr>
                     ))
                 }
